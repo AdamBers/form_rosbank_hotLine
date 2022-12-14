@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>РосБанк</title>
+    <link rel="shortcut icon" href="./img/title.png">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <img src="./img/logo.svg" alt="logo">
+    </div>
+    <div class="main-container">
+        <div class="main-question">
+            <p>Насколько вы удовлетворены качеством работы оператора Линии поддержки сотрудников Сети (Hotline)?</p>
+        </div>
+
+        <form action="end.html" id='myForm'>
+            <div class="rating" onchange="handleStar(event)">
+                <input type="radio" name="star" id="star1"><label for="star1" class="fa fa-star"
+                    id="star1label"></label>
+                <input type="radio" name="star" id="star2"><label for="star2" class="fa fa-star"
+                    id="star2label"></label>
+                <input type="radio" name="star" id="star3"><label for="star3" class="fa fa-star"
+                    id="star3label"></label>
+                <input type="radio" name="star" id="star4"><label for="star4" class="fa fa-star"
+                    id="star4label"></label>
+                <input type="radio" name="star" id="star5"><label for="star5" class="fa fa-star"
+                    id="star5label"></label>
+            </div>
+            <div class="error-message hidden" id='error-message'>
+                <p>Пожалуйста, выберите оценку от 1 до 5</p>
+            </div>
+
+
+
+            <div class="content">
+                <div class="q-1 hidden" id='question1'>
+                    <p class="question">Что вас разочаровало?</p>
+                    <input type="checkbox" id="notDecision" name="sadFor" value="notDecision">
+                    <label for="notDecision">Не решен вопрос</label>
+                    <input type="checkbox" id="slowWork" name="sadFor" value="slowWork">
+                    <label for="slowWork">Сотрудник работает медленно</label>
+                    <input type="checkbox" id="notAttention" name="sadFor" value="notAttention">
+                    <label for="notAttention">Нет заботы и внимания</label>
+                    <input type="checkbox" id="dontKnowWork" name="sadFor" value="dontKnowWork">
+                    <label for="dontKnowWork">Некомпетентность сотрудника</label>
+                    <input type="checkbox" id="notKind" name="sadFor" value="notKind">
+                    <label for="notKind">Грубость сотрудника</label>
+
+                </div>
+
+                <div class="q-2 hidden" id='question2'>
+                    <p class="question">Чего не хватило до 5 баллов?</p>
+                    <input type="checkbox" id="faster" name="sadFor2" value="faster">
+                    <label for="faster">Обслуживать быстрее</label>
+                    <input type="checkbox" id="payAttention" name="sadFor2" value="payAttention">
+                    <label for="payAttention">Проявлять больше заботы и внимания</label>
+                    <input type="checkbox" id="moreKnowledge" name="sadFor2" value="moreKnowledge">
+                    <label for="moreKnowledge">Улучшить знания сотрудников</label>
+                    <input type="checkbox" id="beKind" name="sadFor2" value="beKind">
+                    <label for="beKind">Быть вежливее</label>
+
+                </div>
+
+                <div class="q-3 hidden" id='question3'>
+                    <p class="question">Что понравилось больше всего?</p>
+                    <input type="checkbox" id="fastWork" name="sadFor3" value="fastWork">
+                    <label for="fastWork">Сотрудник работает быстро</label>
+                    <input type="checkbox" id="feelKind" name="sadFor3" value="feelKind">
+                    <label for="feelKind">Чувствуется забота</label>
+                    <input type="checkbox" id="goodKnowledge" name="sadFor3" value="goodKnowledge">
+                    <label for="goodKnowledge">Компетентность сотрудника</label>
+                    <input type="checkbox" id="goodKind" name="sadFor3" value="goodKind">
+                    <label for="goodKind">Вежливость и учтивость</label>
+
+                </div>
+
+                <div class="error-message_2 hidden" id="error_2">
+                    <p>Пожалуйста, выберите вариант ответа из списка</p>
+                </div>
+
+                <div class="comment hidden" id="comment_div">
+                    <p class="comment_p">Комментарий</p>
+                    <!-- <input type="text" name="comment" id="comment" placeholder="Оставьте комментарий..." value=""                      onclick="handleComment(event)"> -->
+                    <textarea cols="60" name="text" wrap="soft" oninput="auto_grow(this)" name="comment" id="comment"
+                        placeholder="Оставьте комментарий..." value="" onclick="handleComment(event)"></textarea>
+                </div>
+
+                <div class="error-message_3 hidden" id="error_3">
+                    <p>Пожалуйста, введите комментарий</p>
+                </div>
+            </div>
+
+
+
+            <input type="submit" name="grade" id="send" value="Оценить" class="hidden">
+        </form>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
