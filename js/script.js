@@ -38,7 +38,6 @@ form.onsubmit = function (e) {
 }
 
 
-
 function handleStar(event) {
     const label1 = document.getElementById('star1label')
     const label2 = document.getElementById('star2label')
@@ -51,6 +50,7 @@ function handleStar(event) {
     const errorMessage = document.getElementById('error-message')
     comment_div.classList.remove('hidden')
     send.classList.remove('hidden')
+    document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
 
 
     currentGrade = event.target.id
@@ -117,5 +117,5 @@ function handleComment(e) {
 
 function auto_grow(element) {
     element.style.height = "42px";
-    element.style.height = (element.scrollHeight)+"px";
+    element.style.height = (element.scrollHeight) + "px";
 }
